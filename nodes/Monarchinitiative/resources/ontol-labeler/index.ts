@@ -49,7 +49,7 @@ export const ontolLabelerDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"required": true,
 			"description": "List of ids",

@@ -53,34 +53,325 @@ That's it. No configuration files. No code. It just works.
 
 ## Resources
 
-| Resource | Operations |
-|----------|------------|
-| Bioentity | Get returns genes associated with a given anatomy, Get returns diseases associated with a case, Get returns genotypes associated with a case, Get returns models associated with a case, Get returns phenotypes associated with a case, Get returns variants associated with a case, Get returns cases associated with a disease, Get returns genes associated with a disease, Get returns genotypes associated with a disease, Get returns associations to models of the disease, Get returns pathways associated with a disease, Get returns phenotypes associated with disease, Get returns publications associated with a disease, Get returns substances associated with a disease, Get returns variants associated with a disease, Get returns annotations associated to a function term, Get returns genes associated to a go term, Get returns publications associated to a go term, Get returns taxons associated to a go term, Get returns anatomical entities associated with a gene, Get returns cases associated with a gene, Get returns diseases associated with gene, Get returns expression events for a gene, Get returns function associations for a gene, Get returns genotypes associated with a gene, Get returns homologs for a gene, Get returns interactions for a gene, Get returns models associated with a gene, Get return diseases associated with orthologs of a gene, Get return phenotypes associated with orthologs for a gene, Get returns pathways associated with gene, Get returns phenotypes associated with gene, Get returns publications associated with a gene, Get returns variants associated with a gene, Get returns cases associated with a genotype, Get returns diseases associated with a genotype, Get returns genes associated with a genotype, Get returns genotypesgenotype associations, Get returns models associated with a genotype, Get returns phenotypes associated with a genotype, Get returns publications associated with a genotype, Get returns genotypesvariant associations, Get returns cases associated with a model, Get returns diseases associated with a model, Get returns genes associated with a model, Get returns genotypes associated with a model, Get returns phenotypes associated with a model, Get returns publications associated with a model, Get returns variants associated with a model, Get returns diseases associated with a pathway, Get returns genes associated with a pathway, Get returns phenotypes associated with a pathway, Get returns anatomical entities associated with a phenotype, Get returns cases associated with a phenotype, Get returns diseases associated with a phenotype, Get returns genes associated with a phenotype, Get returns genotypes associated with a phenotype, Get returns pathways associated with a phenotype, Get returns publications associated with a phenotype, Get returns variants associated with a phenotype, Get returns diseases associated with a publication, Get returns genes associated with a publication, Get returns genotypes associated with a publication, Get returns models associated with a publication, Get returns phenotypes associated with a publication, Get returns variants associated with a publication, Get returns associations between an activity and process and the specified substance, Get returns associations between given drug and roles, Get returns substances associated with a disease, Get returns cases associated with a variant, Get returns diseases associated with a variant, Get returns genes associated with a variant, Get returns genotypes associated with a variant, Get returns models associated with a variant, Get returns phenotypes associated with a variant, Get returns publications associated with a variant, Get returns basic info on object of any type, Get returns associations for an entity regardless of the type, Get return basic info on an object for a given type |
-| Association | Get returns associations connecting two entities, Get returns list of matching associations for a given subject category, Get returns list of matching associations between a given subject and object category, Get returns list of matching associations starting from a given subject source, Get returns list of matching associations pointing to a given object target, Get returns list of matching associations of a given type, Get returns the association with a given identifier |
-| Cam | Get returns list of models, Get returns list of matches, Get returns list of all instances, Get returns list of all models, Get returns list of all contributors across all models, Get returns list of all properties used across all models, Get returns list propertyvalues for all models, Get returns list of models matching query, Get returns a complete model, Get returns list of models |
-| Bioentityset | Get returns compact associations for a given input set, Get summary statistics for objects associated, Get todo graph object spanning all entities, Get summary statistics for objects associated |
-| Bioentityset Homologs | Get returns homology associations for a given input set of genes |
-| Bioentityset Slimmer | Get for a given genes summarize its annotations over a defined set of slim, Get for a given genes summarize its annotations over a defined set of slim, Get for a given genes summarize its annotations over a defined set of slim |
-| Evidence Graph | Get returns evidence graph object for a given association, Get returns evidence as a associationresults object given an association |
-| Genome Features | Get returns list of matches |
-| Graph | Get returns edges emanating from a given node, Get returns a graph node |
-| Identifier Mapper | Get todo maps a list of identifiers from a source to a target |
-| Identifier Prefixes | Get returns list of prefixes, Get returns contracted uri, Get returns expanded uri |
-| Mart | Get bulk download of case associations, Get bulk download of disease associations, Get bulk download of gene associations, Get bulk download of orthologs, Get bulk download of paralogs |
-| Nlp Annotate | Get annotate a given text using scigraph annotator, Post annotate a given text using scigraph annotator, Get annotate a given content using scigraph annotator and get all entities from content, Post annotate a given content using scigraph annotator and get all entities from content |
-| Ontol | Get returns information content ic for a set of relevant ontology classes, Get extract a subgraph from an ontology, Post extract a subgraph from an ontology |
-| Ontol Labeler | Get fetches a map from curiesids to labels |
-| Ontol Identifier | Get fetches a map from curiesids to labels, Post fetches a map from curiesids to labels |
-| Ontology | Get returns the ancestor ontology terms shared by two ontology terms, Get returns meta data of an ontology subset slim, Get returns meta data of an ontology term, Get returns graph of an ontology term, Get extract a subgraph from an ontology term, Get returns subsets slims associated to an ontology term |
-| Owl Ontology | Get placeholder  use owlery for now, Get placeholder  use direct sparql endpoint for now |
-| Pair Sim | Get pairwise similarity |
-| Individual | Get returns list of matches, Get returns list of matches |
-| Relation Usage | Get all relations used plus count of associations, Get all relations used plus count of associations, Get relation usage count for all subj x obj category combinations, Get relation usage count for all subj x obj category combinations showing label |
-| Search | Get returns list of matching concepts or entities using lexical search, Get returns list of matching concepts or entities using lexical search, Get returns list of matching concepts or entities using lexical search |
-| Variation Set | Get returns list of variant sets, Post creates a new variant set, Get returns list of matches, Get returns list of variant sets from a specified time period, Deletes variant set, Get returns a variant set, Put updates a variant set |
-| Sim | Get compare a reference profile vs one profiles, Post compare a reference profile vs one or more profiles, Get annotation score, Post get annotation score, Get search for phenotypically similar diseases or model genes |
-| Mme | Post match a patient to diseases based on their phenotypes, Post match a patient to fruit fly genes based on similar phenotypes, Post match a patient to mouse genes based on similar phenotypes, Post match a patient to nematode genes based on similar phenotypes, Post match a patient to zebrafish genes based on similar phenotypes |
-| Metadata | Get metadata for all datasets from scigraph |
+<details>
+<summary><b>Bioentity</b> (79 operations)</summary>
+
+- Get Returns genes associated with a given anatomy
+- Get Returns diseases associated with a case
+- Get Returns genotypes associated with a case
+- Get Returns models associated with a case
+- Get Returns phenotypes associated with a case
+- Get Returns variants associated with a case
+- Get Returns cases associated with a disease
+- Get Returns genes associated with a disease
+- Get Returns genotypes associated with a disease
+- Get Returns associations to models of the disease
+- Get Returns pathways associated with a disease
+- Get Returns phenotypes associated with disease
+- Get Returns publications associated with a disease
+- Get Returns substances associated with a disease
+- Get Returns variants associated with a disease
+- Get Returns annotations associated to a function term
+- Get Returns genes associated to a GO term
+- Get Returns publications associated to a GO term
+- Get Returns taxons associated to a GO term
+- Get Returns anatomical entities associated with a gene
+- Get Returns cases associated with a gene
+- Get Returns diseases associated with gene
+- Get Returns expression events for a gene
+- Get Returns function associations for a gene
+- Get Returns genotypes associated with a gene
+- Get Returns homologs for a gene
+- Get Returns interactions for a gene
+- Get Returns models associated with a gene
+- Get Return diseases associated with orthologs of a gene
+- Get Return phenotypes associated with orthologs for a gene
+- Get Returns pathways associated with gene
+- Get Returns phenotypes associated with gene
+- Get Returns publications associated with a gene
+- Get Returns variants associated with a gene
+- Get Returns cases associated with a genotype
+- Get Returns diseases associated with a genotype
+- Get Returns genes associated with a genotype
+- Get Returns genotypes genotype associations
+- Get Returns models associated with a genotype
+- Get Returns phenotypes associated with a genotype
+- Get Returns publications associated with a genotype
+- Get Returns genotypes variant associations
+- Get Returns cases associated with a model
+- Get Returns diseases associated with a model
+- Get Returns genes associated with a model
+- Get Returns genotypes associated with a model
+- Get Returns phenotypes associated with a model
+- Get Returns publications associated with a model
+- Get Returns variants associated with a model
+- Get Returns diseases associated with a pathway
+- Get Returns genes associated with a pathway
+- Get Returns phenotypes associated with a pathway
+- Get Returns anatomical entities associated with a phenotype
+- Get Returns cases associated with a phenotype
+- Get Returns diseases associated with a phenotype
+- Get Returns genes associated with a phenotype
+- Get Returns genotypes associated with a phenotype
+- Get Returns pathways associated with a phenotype
+- Get Returns publications associated with a phenotype
+- Get Returns variants associated with a phenotype
+- Get Returns diseases associated with a publication
+- Get Returns genes associated with a publication
+- Get Returns genotypes associated with a publication
+- Get Returns models associated with a publication
+- Get Returns phenotypes associated with a publication
+- Get Returns variants associated with a publication
+- Get Returns associations between an activity and process and the specified substance
+- Get Returns associations between given drug and roles
+- Get Returns substances associated with a disease
+- Get Returns cases associated with a variant
+- Get Returns diseases associated with a variant
+- Get Returns genes associated with a variant
+- Get Returns genotypes associated with a variant
+- Get Returns models associated with a variant
+- Get Returns phenotypes associated with a variant
+- Get Returns publications associated with a variant
+- Get Returns basic info on object of any type
+- Get Returns associations for an entity regardless of the type
+- Get Return basic info on an object for a given type
+
+</details>
+
+<details>
+<summary><b>Association</b> (7 operations)</summary>
+
+- Get Returns associations connecting two entities
+- Get Returns list of matching associations for a given subject category
+- Get Returns list of matching associations between a given subject and object category
+- Get Returns list of matching associations starting from a given subject source
+- Get Returns list of matching associations pointing to a given object target
+- Get Returns list of matching associations of a given type
+- Get Returns the association with a given identifier
+
+</details>
+
+<details>
+<summary><b>Cam</b> (10 operations)</summary>
+
+- Get Returns list of models
+- Get Returns list of matches
+- Get Returns list of all instances
+- Get Returns list of ALL models
+- Get Returns list of all contributors across all models
+- Get Returns list of all properties used across all models
+- Get Returns list property values for all models
+- Get Returns list of models matching query
+- Get Returns a complete model
+- Get Returns list of models
+
+</details>
+
+<details>
+<summary><b>Bioentityset</b> (4 operations)</summary>
+
+- Get Returns compact associations for a given input set
+- Get Summary statistics for objects associated
+- Get TODO Graph object spanning all entities
+- Get Summary statistics for objects associated
+
+</details>
+
+<details>
+<summary><b>Bioentityset Homologs</b> (1 operations)</summary>
+
+- Get Returns homology associations for a given input set of genes
+
+</details>
+
+<details>
+<summary><b>Bioentityset Slimmer</b> (3 operations)</summary>
+
+- Get For a given gene s summarize its annotations over a defined set of slim
+- Get For a given gene s summarize its annotations over a defined set of slim
+- Get For a given gene s summarize its annotations over a defined set of slim
+
+</details>
+
+<details>
+<summary><b>Evidence Graph</b> (2 operations)</summary>
+
+- Get Returns evidence graph object for a given association
+- Get Returns evidence as a association results object given an association
+
+</details>
+
+<details>
+<summary><b>Genome Features</b> (1 operations)</summary>
+
+- Get Returns list of matches
+
+</details>
+
+<details>
+<summary><b>Graph</b> (2 operations)</summary>
+
+- Get Returns edges emanating from a given node
+- Get Returns a graph node
+
+</details>
+
+<details>
+<summary><b>Identifier Mapper</b> (1 operations)</summary>
+
+- Get TODO maps a list of identifiers from a source to a target
+
+</details>
+
+<details>
+<summary><b>Identifier Prefixes</b> (3 operations)</summary>
+
+- Get Returns list of prefixes
+- Get Returns contracted URI
+- Get Returns expanded URI
+
+</details>
+
+<details>
+<summary><b>Mart</b> (5 operations)</summary>
+
+- Get Bulk download of case associations
+- Get Bulk download of disease associations
+- Get Bulk download of gene associations
+- Get Bulk download of orthologs
+- Get Bulk download of paralogs
+
+</details>
+
+<details>
+<summary><b>Nlp Annotate</b> (4 operations)</summary>
+
+- Get Annotate a given text using SciGraph annotator
+- Post Annotate a given text using SciGraph annotator
+- Get Annotate a given content using SciGraph annotator and get all entities from content
+- Post Annotate a given content using SciGraph annotator and get all entities from content
+
+</details>
+
+<details>
+<summary><b>Ontol</b> (3 operations)</summary>
+
+- Get Returns information content IC for a set of relevant ontology classes
+- Get Extract a subgraph from an ontology
+- Post Extract a subgraph from an ontology
+
+</details>
+
+<details>
+<summary><b>Ontol Labeler</b> (1 operations)</summary>
+
+- Get Fetches a map from CURIEs IDs to labels
+
+</details>
+
+<details>
+<summary><b>Ontol Identifier</b> (2 operations)</summary>
+
+- Get Fetches a map from CURIEs IDs to labels
+- Post Fetches a map from CURIEs IDs to labels
+
+</details>
+
+<details>
+<summary><b>Ontology</b> (6 operations)</summary>
+
+- Get Returns the ancestor ontology terms shared by two ontology terms
+- Get Returns meta data of an ontology subset slim
+- Get Returns meta data of an ontology term
+- Get Returns graph of an ontology term
+- Get Extract a subgraph from an ontology term
+- Get Returns subsets slims associated to an ontology term
+
+</details>
+
+<details>
+<summary><b>Owl Ontology</b> (2 operations)</summary>
+
+- Get Placeholder use OWLery for now
+- Get Placeholder use direct SPARQL endpoint for now
+
+</details>
+
+<details>
+<summary><b>Pair Sim</b> (1 operations)</summary>
+
+- Get pairwise similarity
+
+</details>
+
+<details>
+<summary><b>Individual</b> (2 operations)</summary>
+
+- Get Returns list of matches
+- Get Returns list of matches
+
+</details>
+
+<details>
+<summary><b>Relation Usage</b> (4 operations)</summary>
+
+- Get All relations used plus count of associations
+- Get All relations used plus count of associations
+- Get Relation usage count for all subj x obj category combinations
+- Get Relation usage count for all subj x obj category combinations showing label
+
+</details>
+
+<details>
+<summary><b>Search</b> (3 operations)</summary>
+
+- Get Returns list of matching concepts or entities using lexical search
+- Get Returns list of matching concepts or entities using lexical search
+- Get Returns list of matching concepts or entities using lexical search
+
+</details>
+
+<details>
+<summary><b>Variation Set</b> (7 operations)</summary>
+
+- Get Returns list of variant sets
+- Post Creates a new variant set
+- Get Returns list of matches
+- Get Returns list of variant sets from a specified time period
+- Delete s variant set
+- Get Returns a variant set
+- Put Updates a variant set
+
+</details>
+
+<details>
+<summary><b>Sim</b> (5 operations)</summary>
+
+- Get Compare a reference profile vs one profiles
+- Post Compare a reference profile vs one or more profiles
+- Get annotation score
+- Post Get annotation score
+- Get Search for phenotypically similar diseases or model genes
+
+</details>
+
+<details>
+<summary><b>Mme</b> (5 operations)</summary>
+
+- Post Match a patient to diseases based on their phenotypes
+- Post Match a patient to fruit fly genes based on similar phenotypes
+- Post Match a patient to mouse genes based on similar phenotypes
+- Post Match a patient to nematode genes based on similar phenotypes
+- Post Match a patient to zebrafish genes based on similar phenotypes
+
+</details>
+
+<details>
+<summary><b>Metadata</b> (1 operations)</summary>
+
+- Get metadata for all datasets from SciGraph
+
+</details>
 
 ---
 

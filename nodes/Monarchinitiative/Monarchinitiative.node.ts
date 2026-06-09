@@ -28,14 +28,14 @@ import { metadataDescription } from './resources/metadata';
 
 export class Monarchinitiative implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'monarchinitiative',
+		displayName: 'Monarchinitiative',
 		name: 'N8nDevMonarchinitiative',
 		icon: { light: 'file:./monarchinitiative.svg', dark: 'file:./monarchinitiative.dark.svg' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
 		description: 'API integration layer for linked biological objects',
-		defaults: { name: 'monarchinitiative' },
+		defaults: { name: 'Monarchinitiative' },
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],

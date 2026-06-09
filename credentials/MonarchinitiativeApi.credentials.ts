@@ -8,7 +8,7 @@ import type {
 export class MonarchinitiativeApi implements ICredentialType {
 	name = 'N8nDevMonarchinitiativeApi';
 
-	displayName = 'monarchinitiative API';
+	displayName = 'Monarchinitiative API';
 
 	icon: Icon = { light: 'file:../nodes/Monarchinitiative/monarchinitiative.svg', dark: 'file:../nodes/Monarchinitiative/monarchinitiative.dark.svg' };
 
@@ -22,7 +22,7 @@ export class MonarchinitiativeApi implements ICredentialType {
 			default: '/api',
 			required: true,
 			placeholder: '/api',
-			description: 'The base URL of your monarchinitiative API server',
+			description: 'The base URL of your Monarchinitiative API server',
 		},
 		{
 			displayName: 'API Key',

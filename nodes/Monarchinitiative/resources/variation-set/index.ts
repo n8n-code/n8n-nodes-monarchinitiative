@@ -266,7 +266,7 @@ export const variationSetDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Category Id",
+			"displayName": "Category ID",
 			"name": "category_id",
 			"type": "number",
 			"default": 0,
@@ -290,7 +290,7 @@ export const variationSetDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"type": "number",
 			"default": 0,
@@ -586,7 +586,7 @@ export const variationSetDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Category Id",
+			"displayName": "Category ID",
 			"name": "category_id",
 			"type": "number",
 			"default": 0,
@@ -610,7 +610,7 @@ export const variationSetDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"type": "number",
 			"default": 0,

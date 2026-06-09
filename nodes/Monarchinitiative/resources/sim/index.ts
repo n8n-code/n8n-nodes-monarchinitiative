@@ -169,7 +169,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Ref Id",
+			"displayName": "Ref ID",
 			"name": "ref_id",
 			"description": "A phenotype or identifier that is composed of phenotypes (eg disease, gene)",
 			"default": "[]",
@@ -194,7 +194,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Query Id",
+			"displayName": "Query ID",
 			"name": "query_id",
 			"description": "A phenotype or identifier that is composed of phenotypes (eg disease, gene)",
 			"default": "[]",
@@ -307,7 +307,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"description": "Phenotype identifier (eg HP:0004935)",
 			"default": "[\n  null\n]",
@@ -332,7 +332,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Absent Id",
+			"displayName": "Absent ID",
 			"name": "absent_id",
 			"description": "absent phenotype (eg HP:0002828)",
 			"default": "[]",
@@ -401,7 +401,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"type": "string",
 			"default": "",
@@ -517,7 +517,7 @@ export const simDescription: INodeProperties[] = [
 			}
 		},
 		{
-			"displayName": "Id",
+			"displayName": "ID",
 			"name": "id",
 			"description": "A phenotype or identifier that is composed of phenotypes (eg disease, gene)",
 			"default": "[]",
