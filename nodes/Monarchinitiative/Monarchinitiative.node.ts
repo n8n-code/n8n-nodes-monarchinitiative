@@ -27,32 +27,32 @@ import { mmeDescription } from './resources/mme';
 import { metadataDescription } from './resources/metadata';
 
 export class Monarchinitiative implements INodeType {
-	description: INodeTypeDescription = {
-		displayName: 'Monarchinitiative',
-		name: 'N8nDevMonarchinitiative',
-		icon: { light: 'file:./monarchinitiative.svg', dark: 'file:./monarchinitiative.dark.svg' },
-		group: ['input'],
-		version: 1,
-		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: 'API integration layer for linked biological objects',
-		defaults: { name: 'Monarchinitiative' },
-		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
-		credentials: [
-			{
-				name: 'N8nDevMonarchinitiativeApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: '={{\$credentials.url}}',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+        description: INodeTypeDescription = {
+                displayName: 'Monarchinitiative',
+                name: 'N8nDevMonarchinitiative',
+                icon: { light: 'file:./monarchinitiative.svg', dark: 'file:./monarchinitiative.dark.svg' },
+                group: ['input'],
+                version: 1,
+                subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
+                description: 'API integration layer for linked biological objects',
+                defaults: { name: 'Monarchinitiative' },
+                usableAsTool: true,
+                inputs: [NodeConnectionTypes.Main],
+                outputs: [NodeConnectionTypes.Main],
+                credentials: [
+                        {
+                                name: 'N8nDevMonarchinitiativeApi',
+                                required: true,
+                        },
+                ],
+                requestDefaults: {
+                        baseURL: '={{\$credentials.url}}',
+                        headers: {
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                        },
+                },
+                properties: [
 		{
 			"displayName": "Resource",
 			"name": "resource",
@@ -218,6 +218,6 @@ export class Monarchinitiative implements INodeType {
 		...simDescription,
 		...mmeDescription,
 		...metadataDescription
-		],
-	};
+                ],
+        };
 }
